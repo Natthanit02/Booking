@@ -1,0 +1,367 @@
+/* ===== Global Styles ===== */
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+a {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+    width: 100%;
+    background-color: #003366;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+nav .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav .link {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav .link a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+nav .link a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* ===== Container Styles ===== */
+.container {
+    background-color: white;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ===== Form Inputs & Buttons ===== */
+form {
+    display: flex;
+    flex-direction: column; /* จัดการให้ label อยู่ในแนวตั้ง */
+    align-items: center; /* จัดการให้ label อยู่กลางแนวนอน */
+    justify-content: center; /* จัดการให้ label อยู่กลางแนวตั้ง */
+}
+
+form label {
+    width: auto; /* กำหนดให้ label ไม่ต้องเต็มความกว้าง */
+    display: block;
+    text-align: center; /* จัดตำแหน่งเนื้อหาภายใน label ให้อยู่กลาง */
+    padding: 5px;
+    color: #444;
+}
+
+input, select {
+    width: 70%;
+    padding: 10px;
+    margin: 5px 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+}
+
+.btn-booking {
+    width: 70%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-booking:hover {
+    background-color: #0056b3;
+}
+
+/* ===== Table Styles ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===== Popups ===== */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+}
+
+.popup.error {
+    background-color: #dc3545;
+}
+
+.popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ===== Misc ===== */
+#statusMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+}
+
+#roomStatus {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* กล่อง Popup กลางจอ */
+.swal-popup-center {
+    border-radius: 16px;
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* กล่องปุ่มรวม */
+.swal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* ปุ่มยืนยัน (ลบ) */
+.swal-confirm {
+    background: linear-gradient(to right, #dc3545, #c82333);
+    color: white;
+    font-weight: bold;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+    transition: all 0.2s ease;
+}
+
+.swal-confirm:hover {
+    background: #b21f2d;
+    transform: translateY(-2px);
+}
+
+/* ปุ่มยกเลิก */
+.swal-cancel {
+    background: #e2e6ea;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.swal-cancel:hover {
+    background: #d6d8db;
+}
+
+/* ปุ่มยืนยันปกติ - สีฟ้า */
+.swal-ok-btn {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  color: white;
+  font-weight: bold;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.swal-ok-btn:hover {
+  background: #004c99;
+  transform: translateY(-1px);
+}
+
+
+/* ===== Responsive Design for Mobile ===== */
+@media (max-width: 768px) {
+    /* Navigation Bar */
+    nav {
+        padding: 10px;
+        flex-direction: column; /* จัด nav ให้เป็นคอลัมน์ */
+        align-items: flex-start;
+    }
+
+    nav .logo {
+        font-size: 18px;
+    }
+
+    nav .link {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column; /* ทำให้ลิงก์แสดงในแนวตั้ง */
+        margin-top: 10px;
+    }
+
+    nav .link a {
+        margin: 5px 0;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    /* Container */
+    .contender {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    /* Form Inputs & Buttons */
+    input, select {
+        width: 90%; /* ลดความกว้างเป็น 90% */
+        font-size: 14px;
+        margin-top: 15px;
+    }
+
+    .btn-booking {
+        width: 90%; /* ลดความกว้างของปุ่ม */
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* Table Styles */
+    table {
+        font-size: 14px; /* ลดขนาดตัวอักษรในตาราง */
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    /* Popup */
+    .popup {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* ===== Very Small Screen (Mobile) ===== */
+@media (max-width: 480px) {
+    /* Navigation Bar */
+    nav {
+        padding: 8px;
+    }
+
+    nav .logo {
+        font-size: 16px;
+    }
+
+    nav .link a {
+        font-size: 12px;
+        padding: 6px;
+        margin: 4px 0;
+    }
+
+    /* Form Inputs & Buttons */
+    input, select {
+        width: 85%;
+        font-size: 13px;
+        margin-top: 12px;
+    }
+
+    .btn-booking {
+        width: 85%;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    /* Popup */
+    .popup {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    /* Table Styles */
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}

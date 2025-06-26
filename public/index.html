@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบจองห้องประชุม</title>
+  <script type="module" src="assets/js/app.js"></script>
+  <script type="module" src="assets/js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+  <nav>
+    <div class="link" id="nav-links">
+      <a href="index.html">หน้าแรก</a>
+      <a href="list.html">รายการจอง</a>
+      <a href="login.html" id="loginLink">เข้าสู่ระบบ</a>
+    </div>
+  </nav>
+  </header>
+  <div class="container">
+    <h1>
+      <img src="image/swp.png" alt="icon" style="height: 32px; vertical-align: middle; margin-right: 10px;">
+      จองห้องประชุม
+    </h1>
+    
+    <form id="bookingForm">
+      <label>ชื่อผู้จอง</label>
+        <input type="text" id="userName" required>
+      <label>เลือกห้อง</label>
+        <select id="roomSelect" required>
+          <option value="" disabled selected hidden>-- ห้องประชุม --</option>
+          <option value="ห้องประชุม Moshi & DIY">ห้องประชุม Moshi & DIY</option>
+          <option value="ห้องประชุม SWP">ห้องประชุม SWP</option>
+          <option value="ห้องประชุม GM">ห้องประชุม GM</option>
+          <option value="ห้องประชุม MD">ห้องประชุม MD</option>
+          <option value="ห้องประชุม ห้องไม้">ห้องประชุม ห้องไม้</option>
+          <option value="ห้องประชุม QM">ห้องประชุม QM</option>
+        </select>
+      <label>วันที่</label>
+      <input type="date" id="dateInput" required>
+      <label>เวลาเริ่ม</label>
+      <input type="time" id="startTime" required>
+      <label>เวลาสิ้นสุด</label>
+      <input type="time" id="endTime" required>
+      <button type="submit" class="btn-booking">จองห้อง</button>
+    </form>
+
+    <h2>สถานะห้องประชุม</h2>
+    <div id="roomStatus"></div>      <!-- แสดงสถานะห้องที่นี่ -->
+  </div>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('open');
+    });
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รายการจองห้องประชุม</title>
+  <script type="module" src="assets/js/viewbookings.js"></script>
+  <script type="module" src="assets/js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="link">
+      <a href="index.html">หน้าแรก</a>
+      <a href="list.html">รายการจอง</a>
+      <a href="login.html" id="loginLink">เข้าสู่ระบบ</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>
+      <img src="image/swp.png" alt="icon" style="height: 32px; vertical-align: middle; margin-right: 10px;">
+      รายการจองห้องประชุม
+    </h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ชื่อผู้จอง</th>
+          <th>ห้อง</th>
+          <th>วันที่</th>
+          <th>เวลาเริ่ม</th>
+          <th>เวลาสิ้นสุด</th>
+          <th>จัดการ</th> 
+        </tr>
+      </thead>
+      <tbody id="bookingTableBody">
+        <tr>
+          <td colspan="6">กำลังโหลดข้อมูล...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
