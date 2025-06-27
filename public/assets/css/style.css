@@ -1,6 +1,11 @@
 /* ===== Global Styles ===== */
+html,
 body {
     font-family: "Segoe UI", sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    /* ป้องกันเลื่อนแนวนอนบนจอแคบ */
     margin: 0;
     padding: 0;
     background-color: #f4f6f8;
@@ -28,7 +33,7 @@ a:hover {
 nav {
     width: 100%;
     background-color: #003366;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     box-sizing: border-box;
     z-index: 1000;
     position: sticky;
@@ -87,20 +92,26 @@ nav .link a:hover {
 /* ===== Form Inputs & Buttons ===== */
 form {
     display: flex;
-    flex-direction: column; /* จัดการให้ label อยู่ในแนวตั้ง */
-    align-items: center; /* จัดการให้ label อยู่กลางแนวนอน */
-    justify-content: center; /* จัดการให้ label อยู่กลางแนวตั้ง */
+    flex-direction: column;
+    /* จัดการให้ label อยู่ในแนวตั้ง */
+    align-items: center;
+    /* จัดการให้ label อยู่กลางแนวนอน */
+    justify-content: center;
+    /* จัดการให้ label อยู่กลางแนวตั้ง */
 }
 
 form label {
-    width: auto; /* กำหนดให้ label ไม่ต้องเต็มความกว้าง */
+    width: auto;
+    /* กำหนดให้ label ไม่ต้องเต็มความกว้าง */
     display: block;
-    text-align: center; /* จัดตำแหน่งเนื้อหาภายใน label ให้อยู่กลาง */
+    text-align: center;
+    /* จัดตำแหน่งเนื้อหาภายใน label ให้อยู่กลาง */
     padding: 5px;
     color: #444;
 }
 
-input, select {
+input,
+select {
     width: 70%;
     padding: 10px;
     margin: 5px 5px;
@@ -140,7 +151,8 @@ thead {
     color: white;
 }
 
-th, td {
+th,
+td {
     padding: 6px 12px;
     border: 1px solid #ddd;
     text-align: center;
@@ -241,30 +253,32 @@ tbody tr:nth-child(even) {
 
 /* ปุ่มยืนยันปกติ - สีฟ้า */
 .swal-ok-btn {
-  background: linear-gradient(to right, #007bff, #0056b3);
-  color: white;
-  font-weight: bold;
-  padding: 10px 22px;
-  border: none;
-  border-radius: 8px;
-  font-size: 15px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-  transition: all 0.2s ease;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    font-weight: bold;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    transition: all 0.2s ease;
 }
 
 .swal-ok-btn:hover {
-  background: #004c99;
-  transform: translateY(-1px);
+    background: #004c99;
+    transform: translateY(-1px);
 }
 
 
 /* ===== Responsive Design for Mobile ===== */
 @media (max-width: 768px) {
     /* Navigation Bar */
+
     nav {
         padding: 10px;
-        flex-direction: column; /* จัด nav ให้เป็นคอลัมน์ */
+        flex-direction: column;
+        /* จัด nav ให้เป็นคอลัมน์ */
         align-items: flex-start;
     }
 
@@ -275,7 +289,8 @@ tbody tr:nth-child(even) {
     nav .link {
         width: 100%;
         justify-content: center;
-        flex-direction: column; /* ทำให้ลิงก์แสดงในแนวตั้ง */
+        flex-direction: column;
+        /* ทำให้ลิงก์แสดงในแนวตั้ง */
         margin-top: 10px;
     }
 
@@ -286,30 +301,42 @@ tbody tr:nth-child(even) {
     }
 
     /* Container */
-    .contender {
-        margin: 10px;
-        padding: 20px;
+    .container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
     }
 
     /* Form Inputs & Buttons */
-    input, select {
-        width: 90%; /* ลดความกว้างเป็น 90% */
+    input,
+    select {
+        width: 90%;
+        /* ลดความกว้างเป็น 90% */
         font-size: 14px;
         margin-top: 15px;
     }
 
     .btn-booking {
-        width: 90%; /* ลดความกว้างของปุ่ม */
+        width: 90%;
+        /* ลดความกว้างของปุ่ม */
         font-size: 14px;
         padding: 12px;
     }
 
     /* Table Styles */
     table {
-        font-size: 14px; /* ลดขนาดตัวอักษรในตาราง */
+        font-size: 14px;
+        /* ลดขนาดตัวอักษรในตาราง */
     }
 
-    th, td {
+    th,
+    td {
         padding: 8px;
     }
 
@@ -322,6 +349,7 @@ tbody tr:nth-child(even) {
 
 /* ===== Very Small Screen (Mobile) ===== */
 @media (max-width: 480px) {
+
     /* Navigation Bar */
     nav {
         padding: 8px;
@@ -338,7 +366,8 @@ tbody tr:nth-child(even) {
     }
 
     /* Form Inputs & Buttons */
-    input, select {
+    input,
+    select {
         width: 85%;
         font-size: 13px;
         margin-top: 12px;
@@ -361,7 +390,8 @@ tbody tr:nth-child(even) {
         font-size: 12px;
     }
 
-    th, td {
+    th,
+    td {
         padding: 6px;
     }
 }
