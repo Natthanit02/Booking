@@ -89,6 +89,13 @@ nav .link a:hover {
     margin-top: 10px;
 }
 
+/* ===== logout buttn ===== */
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 /* ===== Form Inputs & Buttons ===== */
 form {
     display: flex;
